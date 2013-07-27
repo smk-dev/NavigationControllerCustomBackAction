@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gfN-2w-qE7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Smk Navigation Controller-->
+        <scene sceneID="k1U-B0-ywU">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gfN-2w-qE7" customClass="smkNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="28U-Jw-1Gg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="exh-SV-DRa" kind="relationship" relationship="rootViewController" id="WFF-dF-JqJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wm9-sl-lAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="-431"/>
+        </scene>
+        <!--Smk First View Controller-->
+        <scene sceneID="OTf-Hb-McB">
+            <objects>
+                <viewController id="exh-SV-DRa" customClass="smkFirstViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tpw-cW-fOo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nja-L1-wzM">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ztr-kC-ffz" kind="push" id="aGv-eh-4io"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nja-L1-wzM" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="6LZ-V9-1Cq"/>
+                            <constraint firstItem="nja-L1-wzM" firstAttribute="leading" secondItem="tpw-cW-fOo" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AlA-e8-7vz"/>
+                            <constraint firstAttribute="trailing" secondItem="nja-L1-wzM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="F8P-c1-mgq"/>
+                            <constraint firstItem="nja-L1-wzM" firstAttribute="top" secondItem="tpw-cW-fOo" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kQB-S6-IB1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K19-Dr-a5I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J51-CN-RkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-431"/>
+        </scene>
+        <!--Smk Second View Controller-->
+        <scene sceneID="2wz-63-MBI">
+            <objects>
+                <viewController id="Ztr-kC-ffz" customClass="smkSecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uv8-q4-UOG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywS-pY-6rS">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">By default you cannot add action to [UINavigationController backButton]. However there is a workaround solution of this limitation.
+
+When you press backButton in this UINavigationController it will perform an animation and wait for here finish. After that it will perform popViewController.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ywS-pY-6rS" firstAttribute="trailing" secondItem="Uv8-q4-UOG" secondAttribute="trailing" type="default" id="j9y-1k-oMX"/>
+                            <constraint firstItem="ywS-pY-6rS" firstAttribute="top" secondItem="Uv8-q4-UOG" secondAttribute="top" type="default" id="jdE-xj-ghw"/>
+                            <constraint firstItem="ywS-pY-6rS" firstAttribute="bottom" secondItem="Uv8-q4-UOG" secondAttribute="bottom" type="default" id="lKz-Jw-IM2"/>
+                            <constraint firstItem="ywS-pY-6rS" firstAttribute="leading" secondItem="Uv8-q4-UOG" secondAttribute="leading" type="default" id="qgc-r4-pc2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OuB-66-Ruz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P0x-YU-L2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="-431"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="smkFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/smkFirstViewController.h"/>
+        </class>
+        <class className="smkNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/smkNavigationController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
